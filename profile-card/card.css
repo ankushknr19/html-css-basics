@@ -2,6 +2,7 @@
 
 * {
 	box-sizing: border-box;
+	margin: 0;
 }
 
 main {
@@ -11,6 +12,7 @@ main {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
+	font-family: Montserrat, sans-serif;
 	color: #02899c;
 }
 
@@ -21,7 +23,6 @@ article {
 	box-shadow: 5px 8px 20px -10px rgba(0, 0, 0, 0.75);
 	width: 380px;
 	max-width: 100%;
-	font-family: Montserrat, sans-serif;
 	text-align: center;
 	padding: 20px 20px;
 }

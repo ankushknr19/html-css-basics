@@ -1,0 +1,13 @@
+Semantic elements - elements with a meaning.
+A semantic element clearly describes its meaning to both browser and developer.
+
+e.g. of semantic elements - <form>, <table>, <strong>, <article>
+e.g. of non-semantic elements - <div>, <span>
+
+<h1> - The semantic meaning of h1 tag is that it is used to 
+identify the most important header of a specific web page or section.
+
+Two principles of semantic markup:
+    i.  Use HTML tags correctly so that our markup is both human-readable
+        and machine-readable.
+    ii. Don't use HTML tags for presentation purpose.
