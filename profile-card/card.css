@@ -2,18 +2,28 @@
 
 * {
 	box-sizing: border-box;
+}
+
+body {
 	margin: 0;
+	padding: 0;
+	background-color: #28223f;
+	font-family: Montserrat, sans-serif;
+	color: #02899c;
+	transition: background 0.2s linear;
+}
+
+body.light {
+	background-color: #e9e8ed;
+	color: #231e39;
 }
 
 main {
-	background-color: #28223f;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
-	font-family: Montserrat, sans-serif;
-	color: #02899c;
 }
 
 article {
@@ -25,16 +35,25 @@ article {
 	max-width: 100%;
 	text-align: center;
 	padding: 20px 20px;
+	transition: background 0.2s linear;
+}
+
+article.light {
+	background-color: rgb(205, 205, 205);
+}
+
+article:hover {
+	transform: translate(1px, -3px);
 }
 
 img {
 	width: 250px;
 	height: 250px;
 	object-fit: cover;
-	border: 1px solid #03bfcb;
+	border: 1px solid #0d7a88;
 	border-radius: 50%;
 	padding: 7px;
-	margin: 10px;
+	margin: 2px 10px 10px 10px;
 }
 
 .user_level {
@@ -72,35 +91,87 @@ h4 {
 button.primary {
 	background-color: #03bfcb;
 	color: #231e39;
-	border: 1px solid;
+	border: none;
 	border-radius: 3px;
 	padding: 10px 30px;
 	font-size: 1em;
 	font-weight: 400;
 	margin: 0 5px;
+	min-width: 140px;
+	overflow: clip;
+}
+
+button.primary:hover {
+	background-color: #0098a3;
 }
 
 button.primary.ghost {
 	background-color: transparent;
-	color: #02899c;
+	color: #0d7a88;
+	border: 1px solid;
+	position: relative;
+	display: inline-block;
 }
 
-section {
+button.primary.ghost:hover {
+	color: #15a0b3;
+}
+
+.skills {
 	text-align: left;
 	font-size: 15px;
 	margin-top: 25px;
 }
 
-ul {
+.skills ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-li {
+.skills li {
 	border: 1px solid;
 	border-radius: 2px;
 	display: inline-block;
 	padding: 2px 10px;
 	margin: 5px;
 }
+
+/* dark/light theme toggle start */
+
+.theme-toggle-checkbox {
+	position: absolute;
+	display: none;
+}
+
+.theme-toggle-label {
+	background-color: rgba(113, 0, 0, 0.749);
+	display: flex;
+	gap: 10px;
+	padding: 5px 8px;
+	border-radius: 30px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.fa-sun {
+	color: #febb0b;
+}
+
+.fa-moon {
+	color: white;
+}
+
+.fa-circle {
+	position: absolute;
+	color: silver;
+	transform: scale(1.2);
+	transition: transform 0.2s linear;
+}
+
+.theme-toggle-checkbox:checked + .theme-toggle-label .fa-circle {
+	transform: scale(1.2) translate(21.5px);
+}
+
+/* dark/light theme toggle end */

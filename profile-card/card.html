@@ -2,25 +2,43 @@
 	<head>
 		<title>HTML CSS BASICS</title>
 		<link rel="stylesheet" href="card.css" />
+		<script
+			src="https://kit.fontawesome.com/4f508321da.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<main>
-			<article>
+			<article id="profile-card">
+				<div>
+					<input
+						type="checkbox"
+						class="theme-toggle-checkbox"
+						id="theme-toggle-checkbox"
+					/>
+					<label for="theme-toggle-checkbox" class="theme-toggle-label">
+						<i class="fa fa-moon"></i>
+						<i class="fa fa-sun"></i>
+						<i class="fa fa-circle"></i>
+					</label>
+				</div>
 				<p class="user_level">pro</p>
 				<img
 					class="user_image"
 					src="../assests/images/user.jpeg"
 					alt="user"
 				/>
-				<h1>ankush kunwar</h1>
-				<h2>kathmandu</h2>
-				<h4>Software Engineer and Fullstack JavaScript Developer</h4>
-				<div class="buttons">
+				<section>
+					<h1>ankush kunwar</h1>
+					<h2>kathmandu</h2>
+					<h4>Software Engineer and Fullstack JavaScript Developer</h4>
+				</section>
+				<section class="buttons">
 					<button class="primary">Message</button>
 					<button class="primary ghost">Following</button>
-				</div>
-				<section>
-					<h2>Skills</h2>
+				</section>
+				<section class="skills">
+					<h2>skills</h2>
 					<ul>
 						<li>Web Development</li>
 						<li>HTML</li>
@@ -37,3 +55,4 @@
 		</main>
 	</body>
 </html>
+<script src="card.js"></script>
